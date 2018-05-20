@@ -1,0 +1,262 @@
+/************ Maquetacion  ***************/
+
+*{
+    word-wrap: break-word;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.parallaxinicio {
+    margin: 100px 0px;
+}
+
+.ovweflow-x {
+    overflow-x: auto;
+}
+
+.logo {
+    width: 80px;
+    align-self: center;
+}
+
+.navbar-fixed {
+    margin-bottom: 50px !important;
+}
+
+footer {
+    margin-top: 50px !important;
+}
+
+.imgcentrada {
+    display: block !important;
+    margin: auto !important;
+}
+
+hr.style14 {
+    height: 30px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+hr.style14:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+
+/************ COLORES GENERALES ***************/
+html {
+    background-color: #263238;
+}
+
+body, li > a, #menumovil a {
+    color: #e0e0e0 !important;
+}
+
+.collection-item * {
+    color: #01579b !important;
+}
+
+.texto-azul {
+    color: #01579b !important;
+}
+
+.page-footer, nav, .btn-large, #menumovil, #menumovil * {
+    background-color: #01579b !important;
+}
+
+.material-icons, h1, h2 {
+    color: #01579b !important;
+}
+
+.parallaxinicio {
+    color: #e0e0e0;
+}
+
+.pagination li.active {
+    background-color: #01579b !important;
+}
+
+th {
+    font-weight: bolder !important;
+}
+
+.striped > tbody > tr:nth-child(odd) {
+
+    background-color: rgba(188, 204, 213, 0.5) !important;
+
+}
+blockquote{
+    color: #263238;
+    border-left: 5px solid #01579b !important;
+}
+
+/** BOTONES **/
+.btn, .btn-large {
+    color: #e0e0e0 !important;
+    background-color: #01579b !important;
+}
+
+/** MODALS **/
+.modal-content, .modal-footer {
+    background-color: #263238 !important;
+}
+
+/** INPUTS **/
+input, textarea {
+    color: #e0e0e0;
+}
+
+/* label color */
+.input-field label {
+    color: #e0e0e0 !important;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+    color: #e0e0e0 !important;
+}
+
+/* label underline focus color */
+.input-field input:focus, .materialize-textarea:focus {
+    border-bottom: 1px solid #01579b !important;
+    box-shadow: 0 1px 0 0 #01579b !important;
+}
+
+/* valid color */
+.input-field input.valid {
+    color: #e0e0e0 !important;
+}
+
+/* invalid color */
+.input-field input.invalid {
+    border-bottom: 1px solid red !important;
+    box-shadow: 0 1px 0 0 red !important;
+}
+
+textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #01579b;
+    opacity: 1; /* Firefox */
+}
+
+.toast {
+    background-color: #01579b !important;
+}
+
+/* loader */
+#loader {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #01579b !important;
+}
+
+.dropdown-trigger > i {
+    color: #e0e0e0 !important;
+}
+
+/***********CHAT****************/
+#chatListadoAmigos, #chatListadoMensajes {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.conversacion:hover {
+    cursor: pointer;
+}
+
+.card-image{
+    min-width: 100px;
+}
+
+/************ PAGINAS  ***************/
+
+
+/* INICIO LOG */
+.ultraSmallText {
+    font-size: 15px !important;
+}
+.profile-post-uer-image{
+    min-width: 30px !important;
+}
+#amgioscontenedor, #solicitudes {
+    height: 300px;
+    overflow-y: auto;
+}
+
+#novedades {
+    min-height: 200px;
+}
+#novedades a{
+    color: #01579b !important;
+}
+
+#amigos {
+    min-height: 200px;
+}
+
+.indexavatar {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+/* Perfil */
+.imgperfil {
+    height: 120px !important;
+    width: 120px !important;
+}
+
+.imgbanner {
+    background-image: url("https://danielortegaconesa.com/public/img/paginas/perfil/presence-ii.png");
+}
+
+/* Buscar Juegos */
+.caratula {
+    width: 100px !important;
+    height: 100% !important;
+}
+
+/* Ver Juego */
+.imgjuego {
+    width: 100% !important;
+    max-height: 300px !important;
+}
+
+.comentario, .novedad {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.juegodesctext {
+    font-size: 1.3em;
+}
+
+.titulojuego {
+    font-size: 1.6em;
+    padding-bottom: 10px;
+}
+
+/* Anuncios */
+.anuncio{
+    height: 200px;
+}
