@@ -156,6 +156,15 @@ if($_REQUEST["imgsubida"] == "si"){
                 </li>
             </ul>
         </div>
+
+        <div class="input-field col s12">
+            <input type="password" id="contra">
+            <label for="contra">Nueva Contraseña</label>
+        </div>
+        <div class="input-field col s12">
+            <input type="password" id="contra2">
+            <label for="contra2">Repetir Nueva Contrasela</label>
+        </div>
         <div class="row">
             <a id="actualizar" class='col s12 btn btn-large waves-effect'>
                 Actualizar

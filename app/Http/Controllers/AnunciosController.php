@@ -98,21 +98,24 @@ class AnunciosController extends Controller
     {
         if ($campo == "titulo" || $campo == "texto") {
             return view("buscaranuncio")
-                ->with("anuncios", Anuncio::where($campo, "LIKE", "%$valor%")->orderBy("fecha", "desc")->paginate(10))
+                ->with("anuncios", Anuncio::where($campo, "LIKE", "%$valor%")->orderBy("fecha", "desc")->join('usuarios', 'anuncios.nick', '=', 'usuarios.nick')
+                    ->where("baneado",0)->paginate(10))
                 ->with("seleccionado", "$campo")
                 ->with("valor", "$valor");
         }
 
         if ($campo == "precioi") {
             return view("buscaranuncio")
-                ->with("anuncios", Anuncio::where("precio", "<", $valor)->orderBy("fecha", "desc")->paginate(10))
+                ->with("anuncios", Anuncio::where("precio", "<", $valor)->orderBy("fecha", "desc")->join('usuarios', 'anuncios.nick', '=', 'usuarios.nick')
+                    ->where("baneado",0)->paginate(10))
                 ->with("seleccionado", "$campo")
                 ->with("valor", "$valor");
         }
 
         if ($campo == "precios") {
             return view("buscaranuncio")
-                ->with("anuncios", Anuncio::where("precio", ">", $valor)->orderBy("fecha", "desc")->paginate(10))
+                ->with("anuncios", Anuncio::where("precio", ">", $valor)->orderBy("fecha", "desc")->join('usuarios', 'anuncios.nick', '=', 'usuarios.nick')
+                    ->where("baneado",0)->paginate(10))
                 ->with("seleccionado", "$campo")
                 ->with("valor", "$valor");
         }
@@ -122,21 +125,24 @@ class AnunciosController extends Controller
     {
         if ($campo == "titulo" || $campo == "texto") {
             return view("admin.buscaranuncio")
-                ->with("anuncios", Anuncio::where($campo, "LIKE", "%$valor%")->orderBy("fecha", "desc")->paginate(10))
+                ->with("anuncios", Anuncio::where($campo, "LIKE", "%$valor%")->orderBy("fecha", "desc")->join('usuarios', 'anuncios.nick', '=', 'usuarios.nick')
+                    ->where("baneado",0)->paginate(10))
                 ->with("seleccionado", "$campo")
                 ->with("valor", "$valor");
         }
 
         if ($campo == "precioi") {
             return view("buscaranuncio")
-                ->with("anuncios", Anuncio::where("precio", "<", $valor)->orderBy("fecha", "desc")->paginate(10))
+                ->with("anuncios", Anuncio::where("precio", "<", $valor)->orderBy("fecha", "desc")->join('usuarios', 'anuncios.nick', '=', 'usuarios.nick')
+                    ->where("baneado",0)->paginate(10))
                 ->with("seleccionado", "$campo")
                 ->with("valor", "$valor");
         }
 
         if ($campo == "precios") {
             return view("buscaranuncio")
-                ->with("anuncios", Anuncio::where("precio", ">", $valor)->orderBy("fecha", "desc")->paginate(10))
+                ->with("anuncios", Anuncio::where("precio", ">", $valor)->orderBy("fecha", "desc")->join('usuarios', 'anuncios.nick', '=', 'usuarios.nick')
+                    ->where("baneado",0)->paginate(10))
                 ->with("seleccionado", "$campo")
                 ->with("valor", "$valor");
         }
@@ -172,7 +178,7 @@ class AnunciosController extends Controller
             $size = $img->getSize();
 
             if ($size > 1000000) {
-                return redirect("/navegacion/nuevoAnuncio?error=img");
+                return redirect("/navegacion/editarAnuncio/$anuncio->cod?error=img");
                 die;
             }
 
@@ -226,7 +232,7 @@ class AnunciosController extends Controller
                 $anuncio->img = ($anuncio->cod . "red." . $extension);
                 $anuncio->save();
             } else {
-                return redirect("/navegacion/editaranuncio?error=img");
+                return redirect("/navegacion/editarAnuncio/$anuncio->cod?error=img");
                 die;
             }
         }
@@ -310,7 +316,7 @@ class AnunciosController extends Controller
                 $anuncio->img = ($anuncio->cod . "red." . $extension);
                 $anuncio->save();
             } else {
-                return redirect("/admin/navegacion/editaranuncio?error=img");
+                return redirect("/admin/navegacion/editarAnuncio?error=img");
                 die;
             }
         }

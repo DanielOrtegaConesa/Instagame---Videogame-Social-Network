@@ -15,6 +15,10 @@
 
 Route::any('/', "IndexController@index");
 Route::any('/index/entrar', "IndexController@entrar");
+Route::any('/recuperar/mostrar', "RecuperarController@mostrar");
+Route::any('/recuperar/recuperar', "RecuperarController@enviarMail");
+Route::any('/recuperar/validar', "RecuperarController@validar");
+
 
 Route::any('/admin', "IndexController@indexAdmin");
 Route::any('/index/entrarAdmin', "IndexController@entrarAdmin");

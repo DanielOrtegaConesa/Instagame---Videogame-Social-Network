@@ -33,8 +33,7 @@
 
                         <div class="left-align">{{$u->nick}}</div>
                         <div class="right-align">
-                            <i id="reportuser" class="material-icons waves-effect red-text">report_problem</i>
-
+                            <i id="reportuser" class="material-icons waves-effect red-text tooltipped rightmargin30"  data-tooltip="Reportar">report_problem</i>
                             <?php
                             $estado = "no";
                             $a1 = \App\Amistades::where("nick1", session("usuario")->nick)->where("nick2", $u->nick)->first();
@@ -44,12 +43,12 @@
                                 $a1 = \App\PeticionesAmistad::where("nick1", session("usuario")->nick)->where("nick2", $u->nick)->first();
                                 $a2 = \App\PeticionesAmistad::where("nick1", $u->nick)->where("nick2", session("usuario")->nick)->first();
                                 if ($a1 == NULL && $a2 == NULL) {
-                                    echo "<i id='add' class='material-icons waves-effect'>person_add</i>";
+                                    echo "<i id='add' class='material-icons waves-effect tooltipped' data-tooltip='Agregar' >person_add</i>";
                                 } else {
                                     echo "<i id='reloj' class='material-icons waves-effect'>timer</i>";
                                 }
                             } else {
-                                echo "<i id='remove' class='material-icons waves-effect'>close</i>";
+                                echo "<i id='remove' class='material-icons waves-effect tooltipped' data-tooltip='Eliminar'>close</i>";
                             }
                             ?>
 

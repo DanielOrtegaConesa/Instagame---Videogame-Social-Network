@@ -87,7 +87,12 @@ class NavegacionAdminController extends Controller
 
     public function buscarAnuncio()
     {
-        return view("admin.buscaranuncio")->with("anuncios", Anuncio::orderBy("fecha", "desc")->paginate(10))->with("value", "")
+        return view("admin.buscaranuncio")->with("anuncios",
+                Anuncio::orderBy("fecha", "desc")
+                    ->join('usuarios', 'anuncios.nick', '=', 'usuarios.nick')
+                    ->where("baneado",0)
+                    ->paginate(10))
+            ->with("value", "")
             ->with("seleccionado", "")
             ->with("valor", "");
     }

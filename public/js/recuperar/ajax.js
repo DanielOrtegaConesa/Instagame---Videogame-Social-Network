@@ -1,35 +1,29 @@
-function ajaxActualizar(desc,red, sm, st, sn, fm, ft, fn, contra) {
+function ajaxRecuperar(email) {
     $.ajax(
         {
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             method: "POST",
-            url: "/editarPerfil/actualizar",
+            url: "/recuperar/recuperar",
             data: {
-                descripcion:desc,
-                red:red,
-                sm: sm,
-                st: st,
-                sn: sn,
-                fm: fm,
-                ft: ft,
-                fn: fn,
-                contra : contra
+                email: email,
+                'response': grecaptcha.getResponse()
             },
 
             success: function (datos) {
-                callbackActualizar(datos);
+                callbackRecuperar(datos);
             },
 
             error: function (e) {
+                grecaptcha.reset();
                 if (e.status == 422) {
                     let errores = e.responseText;
                     errores = JSON.parse(errores);
                     errores = errores.errors;
-                    let c = 0;
+                    let c=0;
                     for (let i in errores) {
-                        if (c != 0) break;
+                        if(c!=0) break;
                         toast(errores[i]);
                         c++;
                     }
@@ -37,7 +31,6 @@ function ajaxActualizar(desc,red, sm, st, sn, fm, ft, fn, contra) {
                     console.log(e);
                     toast("Ha ocurrido un error inesperado");
                 }
-
-            }
+            },
         });
 }

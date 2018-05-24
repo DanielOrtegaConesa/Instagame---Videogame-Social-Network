@@ -81,6 +81,7 @@ class RegistroController extends Controller
             $usuario = Usuario::where('nick', '=', $nick)->first();
             if ($usuario->clave == $clave) {
                 $usuario->validado = 1;
+                $usuario->clave = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 10);
                 $usuario->save();
 
                 $perfil = new Perfil();

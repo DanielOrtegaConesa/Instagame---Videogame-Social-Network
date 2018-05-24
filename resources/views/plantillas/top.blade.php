@@ -34,7 +34,7 @@
     <div class="navbar-fixed ">
         <nav>
             <div class="nav-wrapper ">
-                <a href="#" class="brand-logo right flex h100"><span class="logo">INSTAGAME</span></a>
+                <a href="/" class="brand-logo right flex h100"><span class="logo">INSTAGAME</span></a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
                     <!-- <li><a href="sass.html">Uno</a></li>
                      <li><a href="badges.html">Dos</a></li>

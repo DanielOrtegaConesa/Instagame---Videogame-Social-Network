@@ -38,7 +38,9 @@ footer {
     display: block !important;
     margin: auto !important;
 }
-
+.rightmargin30{
+    margin-right: 30px;
+}
 hr.style14 {
     height: 30px;
     border-style: solid;

@@ -3,7 +3,12 @@
 <div class="section row">
     <div class="input-field col s12 m6 l4">
         <select id="campo">
-            @if($seleccionado == "titulo")
+            @if($seleccionado == "")
+                <option value="titulo" selected>Titulo</option>
+                <option value="texto">Descipcion</option>
+                <option value="precioi">Precio Inferior</option>
+                <option value="precios">Precio Superior</option>
+            @elseif($seleccionado == "titulo")
                 <option value="titulo" selected>Titulo</option>
                 <option value="texto">Descipcion</option>
                 <option value="precioi">Precio Inferior</option>

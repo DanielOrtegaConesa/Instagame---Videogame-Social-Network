@@ -14,6 +14,7 @@ class EditarPerfilController extends Controller
         if(strlen($descripcion)>64){
             $descripcion = substr($descripcion,0,100);
         }
+        $contra = $_REQUEST["contra"];
         $red= $_REQUEST["red"];
         $sm = $_REQUEST["sm"];
         $st = $_REQUEST["st"];
@@ -31,6 +32,9 @@ class EditarPerfilController extends Controller
 
         $usubd->perfil->descripcion = $descripcion;
         $usubd->perfil->red = $red;
+        if($contra != ""){
+            $usubd->password = $contra;
+        }
 
         //////// semana
         if ($sm == "true" && $st == "true" && $sn == "true") {

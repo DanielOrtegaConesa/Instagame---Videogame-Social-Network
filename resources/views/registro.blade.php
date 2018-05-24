@@ -20,12 +20,7 @@
     </div>
     <div class="row">
         <div class="center">
-            <div class="col s6">
-                <a href="{{url("/")}}" id="registrarse" class='col s12 btn-large waves-effect'>
-                    Inicio
-                </a>
-            </div>
-            <div class="col s6">
+            <div class="col s12">
                 <a id="registrar" class='col s12 btn-large waves-effect'>Registrarse</a>
             </div>
         </div>

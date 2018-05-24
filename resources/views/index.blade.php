@@ -34,6 +34,7 @@
                 </div>
             </div>
         </div>
+        <a href="{{url("recuperar/mostrar")}}">¿Olvidaste la contraseña?</a>
         <br/><br/><br/><br/>
 
         <div class="row">
