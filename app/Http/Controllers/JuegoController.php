@@ -249,7 +249,7 @@ class JuegoController extends Controller
         $n->tipo = "comentario";
         $n->asociado = $c->cod;
 
-        $n->texto = "Ha comentado en <a href='/navegacion/verJuego/$codjuego'>" . $j->nombre . "</a>:<br/>
+        $n->texto = "Ha escrito un <a href='/navegacion/verComentario/$c->cod'>comentario</a> en <a href='/navegacion/verJuego/$codjuego'>" . $j->nombre . "</a>:<br/>
         <blockquote>" . $comentario . "</blockquote>";
 
         // Esto se hace porque mi servidor va unos segundos adelantado y las notificaciones aparecen en futuro

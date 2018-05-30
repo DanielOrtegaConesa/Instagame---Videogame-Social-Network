@@ -44,6 +44,8 @@ Route::group(['middleware' => ['session.has.user']], function () {
     //Juegos
     Route::any('/navegacion/buscarJuego', "NavegacionController@buscarJuego");
     Route::any('/navegacion/verJuego/{id}', "NavegacionController@verJuego");
+    //Comentarios
+    Route::any("/navegacion/verComentario/{id}" , "NavegacionController@verComentario");
     //usuarios
     Route::any('/navegacion/buscarUsuario', "NavegacionController@buscarUsuario");
     Route::any('/navegacion/verPerfilAjeno/{nick}', "NavegacionController@verPerfilAjeno");

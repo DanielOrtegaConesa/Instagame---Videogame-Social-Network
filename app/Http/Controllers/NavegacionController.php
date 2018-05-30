@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Anuncio;
+use App\Comentario;
 use App\PeticionesAmistad;
 use Illuminate\Http\Request;
 use App\Juego;
@@ -43,6 +44,9 @@ class NavegacionController extends Controller
         return view("buscarusuario")->with("usuarios", Usuario::where("validado", 1)->where("baneado", 0)->paginate(10))->with("seleccionado", "")->with("valor", "");
     }
 
+    public function verComentario($id){
+        return view("vercomentario")->with("comentario",Comentario::where("cod",$id)->first());
+    }
     public function verperfilajeno($nick)
     {
         return view("verperfilajeno")->with("u", Usuario::where("nick", $nick)->first());

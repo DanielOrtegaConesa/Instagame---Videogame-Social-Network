@@ -88,7 +88,7 @@ function ajaxEliminarComentario(codcomentario) {
             },
             success: function (data) {
                 if (data == "ok") {
-                    toast("eliminado, actualiza para  ver los cambios");
+                    toast("eliminado");
                 } else {
                     toast("No hemos podido eliminar el comentario");
                 }
