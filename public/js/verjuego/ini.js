@@ -9,7 +9,7 @@ $(document).ready(function () {
     });
     $("#enviarComentario").click(function () {
         if ($("#comentario").val() != "") {
-            ajaxEnviarComentario($("#comentario").val(), $("#codjuego").val());
+            ajaxEnviarComentario(escapeHtml($("#comentario").val()), $("#codjuego").val());
         }
     });
 

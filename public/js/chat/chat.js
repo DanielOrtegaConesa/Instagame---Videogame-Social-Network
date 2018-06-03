@@ -154,7 +154,7 @@ function enviarMensaje() {
                 url: "https://danielortegaconesa.com/chat/nuevoMensaje",
                 data: {
                     para: chatAmigo,
-                    mensaje: $("#mensaje").val()
+                    mensaje: escapeHtml($("#mensaje").val())
                 },
                 success: function (data) {
                     $("#mensaje").val("");

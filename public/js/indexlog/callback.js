@@ -41,6 +41,7 @@ function callbackSolicitudes(data) {
 function callbackAmistades(data) {
     data = JSON.parse(data);
     console.log(data);
+    $("#amigos").empty();
     for (let c in data) {
         $("#amigos").append(
             "<div class='col s2 tooltipped waves-effect' data-tooltip='"+data[c].amigo+"'  id='"+data[c].amigo+"' data-position='bottom'>" +
