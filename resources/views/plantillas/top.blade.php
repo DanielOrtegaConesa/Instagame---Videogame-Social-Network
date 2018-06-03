@@ -26,13 +26,7 @@
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-8204445335123894",
-            enable_page_level_ads: true
-        });
-    </script>
+
 </head>
 
 <body>
