@@ -18,8 +18,8 @@
                 <div class="input-field col s12 card white  black-text">
                     <i class="mdi-editor-mode-edit prefix"></i>
                     <textarea id="mensaje" name="mensaje" class="materialize-textarea black-text" placeholder="Escribe tu mensaje aqui"></textarea>
-                    <span> <i id="microfono" class="material-icons right waves-effect">mic_none</i></span>
                     <span> <i id="enviarMensaje" class="material-icons right waves-effect">send</i></span>
+                    <span> <i id="microfono" class="material-icons right waves-effect">mic_none</i></span>
                 </div>
             </form>
     </form>
