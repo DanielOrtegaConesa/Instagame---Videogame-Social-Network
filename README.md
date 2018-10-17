@@ -1,2 +1,4 @@
 # Instagame---Videogame-Social-Network
-It consists of my end-of-course project, I use mainly Laravel, Jquery and Materialize frameworks. It was my first project using Laravel and my first large project. I have developed the following functionalities: Chat 1 to 1, Video game evaluation system, Compression of images uploaded by common users, speech recognition
+Consiste en mi proyecto de fin de curso para el ciclo de Desarrollo de Aplicaciones Web, utilizo principalmente los framework de Laravel, Jquery y Materialise. 
+Fue mi primer proyecto con Laravel y mi primer gran proyecto. 
+He desarrollado las siguientes funcionalidades: Chat 1 a 1, Sistema de evaluación de videojuegos, Compresión de imágenes subidas por usuarios comunes, reconocimiento de voz.
